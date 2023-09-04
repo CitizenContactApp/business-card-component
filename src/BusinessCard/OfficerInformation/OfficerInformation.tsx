@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './OfficerInformation.module.scss';
-import { Officer } from '../../Models';
+import { BusinessCardOfficerData } from '../../Models';
 import { getMailTo, getPhoneLabel } from '../../Helpers';
 import { BusinessCardThemeType } from '../BusinessCard';
 
 export interface OfficerInformationProps {
-  officer: Officer;
+  officer: BusinessCardOfficerData;
   themeType: BusinessCardThemeType;
 }
 

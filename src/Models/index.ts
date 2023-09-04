@@ -1,4 +1,4 @@
-export interface Customer {
+export interface BusinessCardCustomerData {
   name?: string;
   state?: string;
   badgeUrl?: string;
@@ -7,7 +7,7 @@ export interface Customer {
   webSite?: string;
 }
 
-export interface Officer {
+export interface BusinessCardOfficerData {
   name?: string;
   idNumber?: string;
   phoneNumber?: string;
@@ -22,6 +22,6 @@ export interface DataItem {
 }
 
 export interface BusinessCardData {
-  officer: Officer;
-  customer: Customer;
+  officer: BusinessCardOfficerData;
+  customer: BusinessCardCustomerData;
 }
