@@ -4,4 +4,8 @@ export {
   BusinessCardMediaType,
   BusinessCardThemeType
 } from './BusinessCard/BusinessCard';
-export { BusinessCardData } from './Models';
+export {
+  BusinessCardData,
+  BusinessCardCustomerData,
+  BusinessCardOfficerData
+} from './Models';

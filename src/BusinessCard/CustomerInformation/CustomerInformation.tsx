@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './CustomerInformation.module.scss';
-import { Customer } from '../../Models';
+import { BusinessCardCustomerData } from '../../Models';
 import { getMailTo, getPhoneLabel, getWebSiteLabel } from '../../Helpers';
 import { BusinessCardThemeType } from '../BusinessCard';
 
 export interface CustomerInformationProps {
-  customer: Customer;
+  customer: BusinessCardCustomerData;
   themeType: BusinessCardThemeType;
 }
 
