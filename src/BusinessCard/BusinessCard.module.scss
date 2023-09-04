@@ -1,0 +1,50 @@
+@import '../Styles/SFColors.module.scss';
+
+.businessCard {
+  width: 343px;
+  margin-top: 16px;
+
+  /* DM_elevation-6 */
+  box-shadow: 0px 1px 18px 0px rgba(0, 0, 0, 0.12),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 3px 5px -1px rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+
+  display: grid;
+  grid-template-rows: 343px 1fr;
+
+  .separator {
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid $sf-grey-100;
+  }
+
+  .body {
+    padding: 36px 24px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &.isDesktop {
+    width: 810px;
+    padding: 36px;
+    box-sizing: border-box;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+
+    .body {
+      padding: 0;
+    }
+  }
+
+  &.isNightMode {
+    color: $sf-text-white;
+    background-color: $sf-surface-dark;
+
+    .separator {
+      border-color: $sf-grey-700;
+    }
+  }
+}
