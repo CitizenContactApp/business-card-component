@@ -1,0 +1,33 @@
+@import '../../Styles/SFColors.module.scss';
+@import '../../Styles/BodyCommon.module.scss';
+
+.customerInformation {
+  > header {
+    margin-bottom: 12px;
+
+    > h3 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -0.01em;
+    }
+
+    .state {
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .body {
+    @include dataList;
+  }
+
+  &.isNightMode {
+    .body {
+      @include dataList(false);
+    }
+  }
+}

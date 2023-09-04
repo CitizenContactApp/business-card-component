@@ -1,0 +1,52 @@
+{
+  "name": "business-card-component",
+  "version": "1.0.0",
+  "description": "Smartforce business card component",
+  "author": "The Smartforce Team",
+  "license": "MIT",
+  "repository": "Smartforce-Technologies-Inc/business-card-component",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && rollup -c --environment BUILD:production",
+    "build_dev": "npm run clean && rollup -c --environment BUILD:development",
+    "prepare": "npm run build",
+    "link": "npm link --ignore-scripts && npm link ./example-app/node_modules/react",
+    "serve": "npm run build_dev && npm run link && cd example-app && npm run serve"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-typescript": "^9.0.2",
+    "@types/react": "^16.14.11",
+    "autoprefixer": "^10.4.12",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "node-sass": "^7.0.3",
+    "postcss": "^8.4.17",
+    "rollup": "^2.79.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-sass": "^1.12.16",
+    "rollup-plugin-styles": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.55.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  }
+}
