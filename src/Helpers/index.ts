@@ -16,19 +16,18 @@ export function getMailTo(address: string) {
 }
 
 export const getStringAbbreviation = (value: string) => {
-  const reg = /\b(\w)/g;
-  const abbreviation = value.match(reg);
+  const abbreviation = value.split(' ');
   let stringAbbreviation: string = '';
 
   if (abbreviation) {
-    stringAbbreviation = abbreviation[0];
+    stringAbbreviation = abbreviation[0][0];
 
     if (abbreviation.length >= 2) {
-      stringAbbreviation += abbreviation[1];
+      stringAbbreviation += abbreviation[1][0];
     }
 
     if (abbreviation.length >= 3) {
-      stringAbbreviation += abbreviation[2];
+      stringAbbreviation += abbreviation[2][0];
     }
   }
 
