@@ -1,0 +1,34 @@
+@import '../../Styles/AvatarDefault.module.scss';
+@import '../../Styles/SFColors.module.scss';
+
+.avatar {
+  width: 343px;
+  height: 343px;
+  overflow: hidden;
+
+  &.defaultBg {
+    @include defaultAvatarBg;
+  }
+
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  position: relative;
+
+  .nameAbbrev {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $sf-common-white;
+    font-weight: bold;
+    font-size: 110px;
+  }
+
+  &.isDesktop {
+    width: 369px;
+    height: 369px;
+  }
+}
