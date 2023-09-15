@@ -1,6 +1,6 @@
 function mask(value: string, pattern: string) {
   let i = 0;
-  return pattern.replace(/_/g, () => value[i++]);
+  return pattern.replace(/_/g, () => (value[i++] ? value[i - 1] : ''));
 }
 
 export function getPhoneLabel(phoneNumber: string) {
