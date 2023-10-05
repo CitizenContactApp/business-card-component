@@ -11,11 +11,15 @@ export const Badge = ({
   customerName,
   customerBadge
 }: BadgeProps): React.ReactElement<BadgeProps> => {
+  const [error, setError] = React.useState<boolean>(false);
+
   return (
     <div className={styles.badge}>
-      {customerBadge && <img src={customerBadge} alt='' />}
+      {customerBadge && !error && (
+        <img src={customerBadge} alt='' onError={() => setError(true)} />
+      )}
 
-      {!customerBadge && (
+      {(!customerBadge || error) && (
         <label className={styles.nameAbbrev}>
           {getStringAbbreviation(customerName as string)}
         </label>
