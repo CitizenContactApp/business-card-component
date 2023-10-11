@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import styles from './BusinessCard.module.scss';
 import { BusinessCardData } from '../Models';
 import { OfficerInformation } from './OfficerInformation/OfficerInformation';
