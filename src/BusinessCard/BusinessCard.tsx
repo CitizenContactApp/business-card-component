@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from './BusinessCard.module.scss';
 import { BusinessCardData } from '../Models';
 import { OfficerInformation } from './OfficerInformation/OfficerInformation';
@@ -40,6 +40,20 @@ export const BusinessCard = ({
         <hr className={styles.separator} />
 
         <CustomerInformation customer={data.customer} themeType={themeType} />
+
+        {data.notes && (
+          <Fragment>
+            <hr className={styles.separator} />
+            <div
+              className={`${styles.notes} ${
+                themeType === 'night' ? styles.isNightMode : ''
+              }`}
+            >
+              <label>NOTES</label>
+              <p>{data.notes}</p>
+            </div>
+          </Fragment>
+        )}
       </div>
     </div>
   );

@@ -24,4 +24,5 @@ export interface DataItem {
 export interface BusinessCardData {
   officer: BusinessCardOfficerData;
   customer: BusinessCardCustomerData;
+  notes?: string;
 }
