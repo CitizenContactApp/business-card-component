@@ -43,6 +43,8 @@
         line-height: 24px;
         font-weight: 400;
         color: $sf-text-black;
+        text-wrap: pretty;
+        overflow-wrap: anywhere;
       }
 
       &.isNightMode {
