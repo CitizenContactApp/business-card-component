@@ -19,7 +19,8 @@ const data: BusinessCardData = {
     phoneNumber: '3038005042',
     email: 'info@liberty-pd.com',
     webSite: 'https://liberty-pd.com'
-  }
+  },
+  notes: 'Talk to Sergeant Ana Rodriguez. Her phone number is 555 555 5555'
 };
 
 export const App = () => {
