@@ -28,7 +28,11 @@ export const Avatar = ({
       } ${mediaType === 'desktop' ? styles.isDesktop : ''}`}
     >
       {officer.avatarUrl && !error && (
-        <img src={officer.avatarUrl} alt='' onError={() => setError(true)} />
+        <img
+          src={officer.avatarUrl}
+          alt='Avatar'
+          onError={() => setError(true)}
+        />
       )}
 
       {(!officer.avatarUrl || error) && (
