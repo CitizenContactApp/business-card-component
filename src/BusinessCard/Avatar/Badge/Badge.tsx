@@ -16,7 +16,7 @@ export const Badge = ({
   return (
     <div className={styles.badge}>
       {customerBadge && !error && (
-        <img src={customerBadge} alt='' onError={() => setError(true)} />
+        <img src={customerBadge} alt='Badge' onError={() => setError(true)} />
       )}
 
       {(!customerBadge || error) && (
