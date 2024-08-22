@@ -2,8 +2,11 @@
 @import '../../Styles/SFColors.module.scss';
 
 .avatar {
-  width: 343px;
-  height: 343px;
+  /* 
+  *** Accessibility: starting from width 320px resolution
+  */
+  width: 288px;
+  height: 288px;
   overflow: hidden;
 
   &.defaultBg {
@@ -31,5 +34,12 @@
   &.isDesktop {
     width: 369px;
     height: 369px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .avatar {
+    width: 343px;
+    height: 343px;
   }
 }

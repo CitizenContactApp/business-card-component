@@ -1,7 +1,10 @@
 @import '../Styles/SFColors.module.scss';
 
 .businessCard {
-  width: 343px;
+  /* 
+  *** Accessibility: starting from width 320px resolution
+  */
+  width: 288px;
 
   /* DM_elevation-6 */
   box-shadow: 0px 1px 18px 0px rgba(0, 0, 0, 0.12),
@@ -9,7 +12,7 @@
   border-radius: 2px;
 
   display: grid;
-  grid-template-rows: 343px 1fr;
+  grid-template-rows: 288px 1fr;
 
   .separator {
     margin: 0;
@@ -79,5 +82,12 @@
     .separator {
       border-color: $sf-grey-700;
     }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .businessCard {
+    width: 343px;
+    grid-template-rows: 343px 1fr;
   }
 }
