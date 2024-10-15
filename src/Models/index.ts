@@ -13,6 +13,7 @@ export interface BusinessCardOfficerData {
   phoneNumber?: string;
   email?: string;
   avatarUrl?: string;
+  title?: string;
 }
 
 export interface DataItem {

@@ -20,6 +20,7 @@ export const OfficerInformation = ({
       }`}
     >
       <header>
+        {officer.title && <span className={styles.title}>{officer.title}</span>}
         <h2>{officer.name}</h2>
         <p className={styles.idNumber}>ID NUMBER {officer.idNumber}</p>
       </header>
